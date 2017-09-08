@@ -750,7 +750,7 @@ the system detected no disks. We are launching a shell to allow you to
 investigate the problem. Check for disks and their sizes with the
 diskinfo(1M) command. If you do not see disks that you expect, please
 determine your storage controller and reach out to the SmartOS community
-if you require assistence.
+if you require assistance.
 
 If you create or import a zpool named "zones" then installation will continue.
 If you cannot, you should shutdown your system.
@@ -900,7 +900,7 @@ setup_datasets()
 		# DRAM, lest we run into the availrmem double accounting
 		# issue for locked anonymous memory that is backed by
 		# in-memory swap (which will severely and artificially limit
-		# VM tenancy).  We will therfore not create a swap device
+		# VM tenancy).  We will therefore not create a swap device
 		# smaller than DRAM -- but we still allow for the
 		# configuration variable to account for actual consumed space
 		# by using it to set the refreservation on the swap volume
@@ -1295,7 +1295,7 @@ mv $tmp_config /usbkey/config || fatal "failed to persist configuration"
 root_shadow=$(/usr/lib/cryptpass "$root_shadow")
 sed -e "s|^root:[^\:]*:|root:${root_shadow}:|" /etc/shadow > /usbkey/shadow \
       && chmod 400 /usbkey/shadow
-[[ $? -eq 0 ]] || fatal "failed to preserve root pasword"
+[[ $? -eq 0 ]] || fatal "failed to preserve root password"
 
 cp -rp /etc/ssh /usbkey/ssh || fatal "failed to set up preserve host keys"
 
